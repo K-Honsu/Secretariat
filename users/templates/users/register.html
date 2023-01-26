@@ -1,0 +1,24 @@
+{% extends 'base/main.html' %} {% load crispy_forms_tags %} {% block content %}
+
+<!-- <h2>Register</h2>
+<div class="content-section">
+  <form action="" method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-4">Join Today</legend>
+    </fieldset>
+  </form>
+</div>
+{{page.as_p}}
+ -->
+
+<form>
+  {% csrf_token %}
+  <fieldset>
+    <legend>Join Today</legend>
+    {{page|crispy}}
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+{% endblock content %}

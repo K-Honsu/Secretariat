@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   list-style: none;
-  gap: 6.5rem;
+  gap: 9.5rem;
   padding-left: 390px;
   margin-top: 50px;
 }
@@ -10,11 +10,20 @@
 img {
   margin-top: -90px;
   height: 150px;
+  margin-right: 370px;
 }
 
 .header__nav a:hover {
   /* color: red; */
   /* background-color: red; */
-  border: solid blue;
+  border: solid white;
   padding: 10px 30px;
+}
+
+.dis {
+  margin-top: 50px;
+}
+
+.nav-item {
+  margin-right: 20px;
 }
