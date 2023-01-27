@@ -12,13 +12,16 @@
 {{page.as_p}}
  -->
 
-<form>
+<form method="POST">
   {% csrf_token %}
   <fieldset>
     <legend>Join Today</legend>
-    {{page|crispy}}
+    {{form|crispy}}
     <br />
     <button type="submit" class="btn btn-primary">Submit</button>
   </fieldset>
 </form>
+<br />
+<!-- Don't have an account section -->
+<div>Already have an account <a href="{% url 'login' %}">Sign In</a></div>
 {% endblock content %}

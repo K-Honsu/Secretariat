@@ -1,0 +1,36 @@
+{% extends 'base/main.html' %} {% block content %}
+
+<br />
+<form action="" method="POST">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Username</label>
+    <input
+      name="username"
+      type="username"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Enter your Username"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Password</label>
+    <input
+      type="password"
+      name="password"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Enter your password"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div>
+  <p>
+    Don't have an account?
+    <a href="{% url 'register' %}">Click here to sign Up</a>
+  </p>
+</div>
+
+{% endblock content%}

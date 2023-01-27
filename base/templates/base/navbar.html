@@ -1,17 +1,4 @@
 {% block content %} {% load static %}
-
-<!-- <nav class="navbar bg-primary" data-bs-theme="dark">
-  Navbar content
-  <div class="header__nav">
-    <ul>
-      <a href=""><li>Home</li></a>
-      <a href=""><li>About</li></a>
-      <a href=""><li>Login</li></a>
-      <a href="{% url 'register' %}"><li>Register</li></a>
-      <a href=""><li>Contact Us</li></a>
-    </ul>
-  </div>
-</nav> -->
 <!--  -->
 <!--  -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -30,6 +17,8 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!--  -->
+    {% if user.is_authenticated %}
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -43,25 +32,76 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>
         </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="{% url 'register' %}"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Register
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="{% url 'register' %}">Register</a>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout-page' %}">Logout</a>
+        </li>
+        {% else %}
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'home' %}"
+                >Home</a
+              >
             </li>
-            <li><a class="dropdown-item" href="#">Login</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="{% url 'register' %}"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Register
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="{% url 'register' %}"
+                    >Register</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+                </li>
+              </ul>
+            </li>
           </ul>
+        </div>
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+  <!-- if user is authenticated -->
+
+  <!-- {% if user.is_authenticated %}
+  <div class="dist">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout-page' %}">Logout</a>
         </li>
       </ul>
     </div>
   </div>
+  {% endif %} -->
 </nav>
-{% endblock content %}
+
+{% if messages %} {% for message in messages %}
+<div class="alert alert-{{message.tags}}">
+  {{message}}
+  <a href="" class="del-mesg">&times;</a>
+</div>
+{% endfor %} {% endif %} {% endblock content %}
