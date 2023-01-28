@@ -5,7 +5,6 @@ from django.contrib import messages
 # Create your views here.
 
 def registerPage(request):
-    # page = 'register'
     form = CustomField()
     if request.method == 'POST':
         form = CustomField(request.POST)
@@ -18,7 +17,6 @@ def registerPage(request):
 
 
 def loginPage(request):
-    page = 'login-page'
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -26,7 +24,7 @@ def loginPage(request):
         if user is not None:
             login(request, user)
             return redirect('home')
-    context = {'page':page}
+    context = {}
     return render(request, 'users/login.html', context)
 
 
