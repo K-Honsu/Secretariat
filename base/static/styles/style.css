@@ -31,3 +31,12 @@ img {
 .dist {
   margin-right: 600px;
 }
+
+/* #icons {
+  width: fit-content;
+} */
+
+.iconing {
+  width: 20px;
+  height: 40px;
+}
