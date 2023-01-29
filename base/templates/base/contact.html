@@ -1,17 +1,54 @@
-{% extends 'base/main.html' %} {% block content %}
+{% extends 'base/main.html' %} {% load crispy_forms_tags %} {% block content %}
 
 <h1>Contact section</h1>
 
 <br />
 
-<div>
-  <div>
-    <span class="border border-3" id="icons">
-      <img
-        src="https://img.icons8.com/ios-filled/50/null/place-marker--v1.png" class="iconing"
-      />
-    </span>
+<section class="contact">
+  <!--  -->
+  <div class="distl">
+    <div>
+      <i class="bx bxs-location-plus"></i>
+      <h4>Our Location</h4>
+      <h6>
+        Km 4, Apapa-Oshodi Expressway, (Sanya Bus <br />
+        stop) Lagos, Nigeria
+      </h6>
+    </div>
   </div>
-</div>
+  <!--  -->
+  <!--  -->
+  <div class="distl">
+    <div>
+      <i class="bx bxs-location-plus"></i>
+      <h4>Phone Number</h4>
+      <h6>(+234) xxx-xxx-xxx</h6>
+      <h6>(+234) xxx-xxx-xxx</h6>
+    </div>
+  </div>
+  <!--  -->
+  <!--  -->
+  <div class="distl">
+    <div>
+      <i class="bx bxs-location-plus"></i>
+      <h4>Email Address</h4>
+      <h6>info@candsyf.org</h6>
+      <br />
+      <h6>ayonio@candsyf.org</h6>
+    </div>
+  </div>
+  <!--  -->
+</section>
+
+<!-- form section -->
+<form action="" method="POST">
+  {% csrf_token %}
+  <fieldset>
+    <legend>Contact Us</legend>
+    {{form|crispy}}
+    <br />
+    <button type="submit" class="btn btn-primary">Send Now</button>
+  </fieldset>
+</form>
 
 {% endblock content %}

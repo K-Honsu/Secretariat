@@ -32,11 +32,13 @@ img {
   margin-right: 600px;
 }
 
-/* #icons {
-  width: fit-content;
-} */
+.distl {
+  border: 1px solid black;
+  width: 70%;
+  /* margin: auto; */
+  text-align: center;
+}
 
-.iconing {
-  width: 20px;
-  height: 40px;
+.contact {
+  text-align: center;
 }
