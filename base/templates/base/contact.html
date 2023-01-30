@@ -51,4 +51,10 @@
   </fieldset>
 </form>
 
-{% endblock content %}
+<!-- messages -->
+{% if messages %} {% for message in messages %}
+<div class="alert alert-{{message.tags}}">
+  {{message}}
+  <a href="" class="del-mesg">&times;</a>
+</div>
+{% endfor %} {% endif %} {% endblock content %}
