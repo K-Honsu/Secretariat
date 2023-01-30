@@ -28,17 +28,22 @@ img {
   margin-right: 20px;
 }
 
-.dist {
+/* .dist {
   margin-right: 600px;
-}
+} */
 
 .distl {
   border: 1px solid black;
-  width: 70%;
+  border-radius: 25px;
+  width: 20%;
   /* margin: auto; */
   text-align: center;
+  /* display: flex; */
+  padding-right: 20px;
 }
 
 .contact {
   text-align: center;
+  display: flex;
+  gap: 50px;
 }
