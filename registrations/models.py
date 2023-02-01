@@ -6,3 +6,7 @@ class MarriageThanksgiving(models.Model):
     band_of_husband = models.CharField(max_length=350)
     band_of_wife = models.CharField(max_length=350)
     date_of_marriage = models.DateTimeField(auto_now_add=True)
+    
+    
+    def __str__(self):
+        return self.family_name

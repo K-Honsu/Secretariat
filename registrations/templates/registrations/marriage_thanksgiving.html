@@ -1,0 +1,14 @@
+{% extends 'base/main.html' %} {% load crispy_forms_tags %} {% block content %}
+
+<h1>Register for Marriage Thanksgiving</h1>
+<form method="POST">
+  {% csrf_token %}
+  <fieldset>
+    <legend>Register for Marriage Thanksgiving</legend>
+    {{mar|crispy}}
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+
+{% endblock content%}
