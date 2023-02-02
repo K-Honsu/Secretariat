@@ -23,6 +23,7 @@ def loginPage(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
+            messages.success(request, 'Logged in successful')
             return redirect('home')
     context = {}
     return render(request, 'users/login.html', context)

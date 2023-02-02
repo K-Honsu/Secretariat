@@ -14,6 +14,6 @@ def marriage(request):
         if mar.is_valid():
             mar.save()
             messages.success(request, 'Details saved successfully')
-            return redirect('registrations')
+            return redirect('registration')
     context = {'mar':mar}
     return render(request, 'registrations/marriage_thanksgiving.html', context)
