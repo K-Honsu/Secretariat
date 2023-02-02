@@ -20,5 +20,10 @@ def marriage(request):
 
 def birth(request):
     forms = BirthNotification()
+    if request.method == 'POST':
+        forms = BirthNotification(request.POST)
+        if forms.is_valid():
+            forms.save()
+            messages.success(request, 'Records saved successfully!')
     context = {'forms':forms}
     return render(request, 'registrations/birth_notification.html', context)

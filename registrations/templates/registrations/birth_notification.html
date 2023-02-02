@@ -3,6 +3,7 @@
 <h6>Birth Notification</h6>
 
 <form action="" method="POST">
+  {% csrf_token %}
   <fieldset>
     <legend>Birth Notification</legend>
     {{forms|crispy}}
