@@ -17,3 +17,8 @@ def marriage(request):
             return redirect('registration')
     context = {'mar':mar}
     return render(request, 'registrations/marriage_thanksgiving.html', context)
+
+def birth(request):
+    forms = BirthNotification()
+    context = {'forms':forms}
+    return render(request, 'registrations/birth_notification.html', context)

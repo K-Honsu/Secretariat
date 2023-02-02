@@ -1,14 +1,14 @@
 {% extends 'base/main.html' %} {% load crispy_forms_tags %} {% block content %}
 
-<h1>Marriage Thanksgiving</h1>
-<form method="POST">
-  {% csrf_token %}
+<h6>Birth Notification</h6>
+
+<form action="" method="POST">
   <fieldset>
-    <legend>Registration for Marriage Thanksgiving</legend>
-    {{mar|crispy}}
+    <legend>Birth Notification</legend>
+    {{forms|crispy}}
     <br />
     <button type="submit" class="btn btn-primary">Submit</button>
   </fieldset>
 </form>
 
-{% endblock content%}
+{% endblock content %}
