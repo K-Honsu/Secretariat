@@ -1,0 +1,12 @@
+{% extends 'base/main.html' %} {% load crispy_forms_tags %} {% block content %}
+
+<h4>Child Dedications</h4>
+<form action="" method="POST">
+  {% csrf_token %}
+  <fieldset>
+    <legend>Come Register</legend>
+    {{form|cripsy}}
+  </fieldset>
+</form>
+
+{% endblock content %}
