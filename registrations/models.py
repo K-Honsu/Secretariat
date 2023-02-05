@@ -24,8 +24,8 @@ class MarriageThanksgiving(models.Model):
     band_of_husband = models.CharField(max_length=350, choices=MALE_BAND_CHOICES, default='J')
     band_of_wife = models.CharField(max_length=350, choices=FEMALE_BAND_CHOICES, default='RH')
     date_of_marriage = models.DateTimeField(auto_now_add=True)
-    father_unit_name = models.CharField(max_length=20)
-    mother_unit_name = models.CharField(max_length=20)
+    father_unit_name = models.CharField(max_length=90, null=True)
+    mother_unit_name = models.CharField(max_length=90, null=True)
     
     
     def __str__(self):
@@ -57,8 +57,8 @@ class BirthNotification(models.Model):
     child_Last_Name = models.CharField(max_length=200)
     father_Band_Name = models.CharField(max_length=20, choices=MALE_BAND_CHOICES, default='SM')
     mother_Band_Name = models.CharField(max_length=20, choices=FEMALE_BAND_CHOICES, default='RH')
-    father_unit_name = models.CharField(max_length=20)
-    mother_unit_name = models.CharField(max_length=20)
+    father_unit_name = models.CharField(max_length=90, null=True)
+    mother_unit_name = models.CharField(max_length=90, null=True)
     
     
     def __str__(self):
@@ -90,6 +90,7 @@ class ChildDedication(models.Model):
     child_Last_Name = models.CharField(max_length=200)
     father_Band_Name = models.CharField(max_length=20, choices=MALE_BAND_CHOICES, default='SM')
     mother_Band_Name = models.CharField(max_length=20, choices=FEMALE_BAND_CHOICES, default='RH')
-    
+    father_unit_name = models.CharField(max_length=90, null=True)
+    mother_unit_name = models.CharField(max_length=90, null=True)
     def __str__(self):
         return f"{self.child_First_Name} {self.child_Last_Name}"
