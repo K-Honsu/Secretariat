@@ -51,10 +51,12 @@ class BirthNotification(models.Model):
         ('JO', 'JOANA'),
         ('TD', 'TRUTH DIVINE'),
     ]
-    family_Name = models.CharField(max_length=500)
-    child_First_Name = models.CharField(max_length=200)
-    child_Middle_Name = models.CharField(max_length=200, null=True, blank=True)
-    child_Last_Name = models.CharField(max_length=200)
+    Parents_Name = models.CharField(max_length=500)
+    home_address = models.CharField(max_length=500, null=True)
+    contact_number = models.CharField(max_length=90, null=True)
+    delivery_date = models.CharField(max_length=150, null=True)
+    date_of_naming_ceremony = models.CharField(max_length=250, null=True)
+    place_of_naming_ceremony = models.CharField(max_length=450, null=True)
     father_Band_Name = models.CharField(max_length=20, choices=MALE_BAND_CHOICES, default='SM')
     mother_Band_Name = models.CharField(max_length=20, choices=FEMALE_BAND_CHOICES, default='RH')
     father_unit_name = models.CharField(max_length=90, null=True)
@@ -62,7 +64,7 @@ class BirthNotification(models.Model):
     
     
     def __str__(self):
-        return f"{self.child_First_Name} {self.child_Last_Name}"
+        return f"{self.Parents_Name} Birth Notification"
     
     
 class ChildDedication(models.Model):
@@ -84,13 +86,14 @@ class ChildDedication(models.Model):
         ('JO', 'JOANA'),
         ('TD', 'TRUTH DIVINE'),
     ]
-    family_Name = models.CharField(max_length=500)
+    Parent_Name = models.CharField(max_length=500)
     child_First_Name = models.CharField(max_length=200)
-    child_Middle_Name = models.CharField(max_length=200, null=True, blank=True)
-    child_Last_Name = models.CharField(max_length=200)
     father_Band_Name = models.CharField(max_length=20, choices=MALE_BAND_CHOICES, default='SM')
     mother_Band_Name = models.CharField(max_length=20, choices=FEMALE_BAND_CHOICES, default='RH')
     father_unit_name = models.CharField(max_length=90, null=True)
     mother_unit_name = models.CharField(max_length=90, null=True)
+    # date_of_dedication = models.CharField(auto_created=True ,max_length=100, null=True)
+    
+    
     def __str__(self):
-        return f"{self.child_First_Name} {self.child_Last_Name}"
+        return f"{self.child_First_Name} Child Dedication"

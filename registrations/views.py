@@ -37,5 +37,10 @@ def birth(request):
 @login_required(login_url='login')
 def child(request):
     form = ChildDedication()
+    if request.method == 'POST':
+        form = ChildDedication(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('registration')
     context = {'form':form}
     return render(request, 'registrations/child_dedication.html', context)
