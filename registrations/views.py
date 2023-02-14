@@ -44,3 +44,7 @@ def child(request):
             return redirect('registration')
     context = {'form':form}
     return render(request, 'registrations/child_dedication.html', context)
+
+
+def abort(request):
+    return render(request, 'registrations/abort.html')
