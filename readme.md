@@ -63,3 +63,5 @@ IN VSCODE
 - Add a user, password, host, and port to the database obj(they can be found in the pgadmin created server)
 - To make connection, we need a database driver to make the connectionn from django to postgres(database adapter) and its called psycopg2
 - Work on it more and more i say
+- forgot to push yesterday damn!!!!
+
