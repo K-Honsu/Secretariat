@@ -7,7 +7,7 @@
   margin-top: 50px;
 }
 
-img {
+.imme {
   margin-top: -90px;
   height: 150px;
   margin-right: 370px;
@@ -46,4 +46,8 @@ img {
   text-align: center;
   display: flex;
   gap: 50px;
+}
+
+#shift {
+  margin-top: 40000px;
 }

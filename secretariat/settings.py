@@ -128,7 +128,7 @@ WSGI_APPLICATION = 'secretariat.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'secret',
+        'NAME': 'newSecretariat',
         'USER': 'postgres',
         'PASSWORD': 'Anjola123@',
         'HOST': 'localhost', 
