@@ -26,6 +26,8 @@ class MarriageThanksgiving(models.Model):
     date_of_marriage = models.DateTimeField(auto_now_add=True)
     father_unit_name = models.CharField(max_length=90, null=True)
     mother_unit_name = models.CharField(max_length=90, null=True)
+    is_read = models.BooleanField(default=False)
+    # time_stamp = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     
     
     def __str__(self):
@@ -62,7 +64,6 @@ class BirthNotification(models.Model):
     father_unit_name = models.CharField(max_length=90, null=True)
     mother_unit_name = models.CharField(max_length=90, null=True)
     
-    
     def __str__(self):
         return f"{self.Parents_Name} Birth Notification"
     
@@ -70,21 +71,21 @@ class BirthNotification(models.Model):
 class ChildDedication(models.Model):
     MALE_BAND_CHOICES = [
         ('NIL', 'NIL'),
-        ('J', 'JOSEPH'),
-        ('JE', 'JEREMIAH'),
-        ('EP', 'EPHRAIM'),
-        ('SM', 'ST.MARK'),
-        ('SJ', 'ST.JOHN'),
-        ('JA', 'JAMES'),
+        ('JOSEPH', 'JOSEPH'),
+        ('JEREMIAH', 'JEREMIAH'),
+        ('EPHRAIM', 'EPHRAIM'),
+        ('ST.MARK', 'ST.MARK'),
+        ('ST.JOHN', 'ST.JOHN'),
+        ('JAMES', 'JAMES'),
     ]
     FEMALE_BAND_CHOICES = [
         ('NIL', 'NIL'),
-        ('RH', 'RHODA'),
-        ('HZ', 'HEPZIBAH'),
-        ('FT', 'FAITH'),
-        ('SU', 'SUSANNAH'),
-        ('JO', 'JOANA'),
-        ('TD', 'TRUTH DIVINE'),
+        ('RHODA', 'RHODA'),
+        ('HEPZIBAH', 'HEPZIBAH'),
+        ('FAITH', 'FAITH'),
+        ('SUSANNAH', 'SUSANNAH'),
+        ('JOANA', 'JOANA'),
+        ('TRUTH DIVINE', 'TRUTH DIVINE'),
     ]
     Parent_Name = models.CharField(max_length=500)
     child_First_Name = models.CharField(max_length=200)
@@ -92,6 +93,7 @@ class ChildDedication(models.Model):
     mother_Band_Name = models.CharField(max_length=20, choices=FEMALE_BAND_CHOICES, default='RH')
     father_unit_name = models.CharField(max_length=90, null=True)
     mother_unit_name = models.CharField(max_length=90, null=True)
+    time_stamp = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     # date_of_dedication = models.CharField(auto_created=True ,max_length=100, null=True)
     
     

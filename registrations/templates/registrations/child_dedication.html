@@ -1,16 +1,16 @@
 {% extends 'base/main.html' %} {% load crispy_forms_tags %} {% block content %}
 
 <h4>Child Dedications</h4>
-<form action="" method="POST">
-  {% csrf_token %}
-  <fieldset>
-    <legend>Come Register</legend>
-    {{form|crispy}}
-    <br />
-    <label for="">Date of Dedication</label>
-    <input type="date" name="" id="" />
-  </fieldset>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
+<div>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <fieldset>
+      <legend>Come Register</legend>
+      {{form|crispy}}
+      <br />
+      <label for="">Date of Dedication</label>
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
 {% endblock content %}
