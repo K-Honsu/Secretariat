@@ -85,7 +85,7 @@ class ChildDedication(models.Model):
         ('FAITH', 'FAITH'),
         ('SUSANNAH', 'SUSANNAH'),
         ('JOANA', 'JOANA'),
-        ('TRUTH DIVINE', 'TRUTH DIVIN'),
+        ('TRUTH DIVINE', 'TRUTH DIVINE'),
     ]
     Parent_Name = models.CharField(max_length=500)
     child_First_Name = models.CharField(max_length=200)
