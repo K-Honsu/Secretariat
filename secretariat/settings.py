@@ -28,7 +28,7 @@ SECRET_KEY = '595007635aa7735fa26999bbe042de4f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['secretariat.onrender.com', '127.0.0.1:8000', '127.0.0.1']
 
 
 # Application definition
