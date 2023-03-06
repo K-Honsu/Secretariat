@@ -126,16 +126,6 @@ WSGI_APPLICATION = 'secretariat.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'newSecretariat',
-#         'USER': 'postgres',
-#         'PASSWORD': 'Anjola123@',
-#         'HOST': 'localhost', 
-#         'PORT': '5432', 
-#     }
-# }
 
 
 
