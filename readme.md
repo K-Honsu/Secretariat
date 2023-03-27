@@ -77,4 +77,4 @@ Quit the server with CONTROL-C.
 
 - Congratulations, you have now successfully run a Django Python backend on the local server!
 
-- Hosted here <a href="www.secretariat.onrender.com">Link</a>
+- Hosted here <a href="http://secretariat.onrender.com/">Link</a>
