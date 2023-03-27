@@ -1,67 +1,80 @@
-API FOR SECRETARIAT
+# **PROJECT FOR THE SECRETARIAT UNIT**
 
-- register user
-- request for, email, phone number, password and confirm password, name (first name, last name, middle name), title, role, band etc
-- log a user in
+## Installing Django📲<hr>
 
-  - log in with email and username and password.
+To install Django, you can follow these steps:
 
-- registration for the following
-  - birth notification
-    - ask for parent name, house address, contact-phone-number, parent-unit, parent-band, delivery-date, sex(dropdown[male, female]), date-of-naming-ceremony, place-of-naming-ceremony
-  - child notification
-    - inputs for parent name, child-name, band-of-both-parent([mother, father]), contact-phone-number, date-of-dedication(i can use django auto_now_add= True)
-  - marriage thanksgiving
-    - inputs for parent name, date of marriage, band-of-both-parents([mother, father]), contact-phone-number([mother, father])
-- after each registration, the admin can view the following
-  VIEWS
-- all registration
+- Open a command prompt or terminal on your computer.
 
-- a registration
-  - log a user in
-  - registration for the following
-  - birth notification
-  - child notification
-  - marriage thanksgiving
-- can also delete all registration in all registration
-- can also delete just one registration in each registration
+- Ensure that you have Python installed on your system. You can check this by running the following command:
 
-URLS
+```
+python --version
+```
 
-- Have a url for route under registeration registrations
-- Have url to get all birth-notification
-- Have a url to get one or a specific id of a birth-notification
-- Have a url to get all child-notification
-- Have a url to get one or a specific child-notification
-- Have a url to get all marriage thanksgiving
-- Have a url to get one or a specific id for marriage-thanksgiving
+- If you don't have Python installed, you can download it from the official website: https://www.python.org/downloads/
 
-VIEWS FOR APIS
-STEPS
+- Once you have confirmed that you have Python installed, you can install Django by running the following command:
 
-- import rest framework (follow docs), get routes follow the following
+```
+pip install Django
+```
 
-STORING JSON WEB TOKEN
-CONNECTING POSTGRES DATABASE
+- This will download and install the latest version of Django and any required dependencies.
 
-- Download postgres and create a local database on our pc, then do it online with aws(hosting database).
-  Use PG-Admin, graphical database
+- Once the installation is complete, you can check the version of Django installed by running the following command:
 
-STEPS
+```
+python -m django --version
+```
 
-- Download Postgres from postgres.org and download pgadmin-4 from pgadmin.org
-- Step up the installation process
-- Set up a password then remember the password
-- Open pgadmin and right click on server, navigate to server and register a new server with information as "name", register localhost and input password and save.
-- Naviagate to database and click on create and navigate
-- Schemas is wherer the database table will be stored
+- This will display the version of Django that is currently installed on your system.
 
-IN VSCODE
+- Congratulations, you have now successfully installed Django!
 
-- Navigate to root settings, then make a clone of the database and change engine to "postgresql"
-- Then change name to the database name given in pgadmin, in my case "secretariat"
-- Add a user, password, host, and port to the database obj(they can be found in the pgadmin created server)
-- To make connection, we need a database driver to make the connectionn from django to postgres(database adapter) and its called psycopg2
-- Work on it more and more i say
-- forgot to push yesterday damn!!!!
+## Running it on the Local Server📡 <hr>
 
+- To run a Django Python backend on the local server, you can follow these steps:
+
+- Open a command prompt or terminal on your computer.
+
+- Navigate to the root directory of your Django project.
+
+- Activate the virtual environment for your project. If you don't have a virtual environment set up, you can create one using the venv module by running the following command:
+
+```
+python -m venv myvenv
+```
+
+- This will create a new virtual environment in a directory named myvenv.
+
+- Activate the virtual environment by running the following command:
+
+```
+source myvenv/bin/activate
+```
+
+- Note: If you're on Windows, the command to activate the virtual environment will be slightly different. You can use the following command instead:
+
+```
+myvenv\Scripts\activate
+```
+
+- Once the virtual environment is activated, you can start the Django development server by running the following command:
+
+```
+python manage.py runserver
+```
+
+- This will start the development server on your local machine, and you should see output similar to the following:
+
+```
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+```
+
+- Open a web browser and navigate to the URL that was displayed in the output. You should see the Django project running on your local machine.
+
+- Congratulations, you have now successfully run a Django Python backend on the local server!
+
+- Hosted here <a href="www.secretariat.onrender.com">Link</a>
